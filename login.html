@@ -94,12 +94,34 @@
       </div>
     </h2>
     <form action="login.php" method="post" class="ui large form">
-      <div class="ui stacked segment">
+    
+   <div class="ui stacked segment">
+   
+ <!-- Radio Selection -->
+	<div class="inline fields">
+	    <label>Specify your account type:</label><br><br>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="frequency" checked="checked" value="1">
+	        <label>Employee</label>
+	      </div>
+	    </div>
+	    <div class="field">
+	      <div class="ui radio checkbox">
+	        <input type="radio" name="frequency" value="0">
+	        <label>Employer</label>
+	      </div>
+	    </div>
+	</div>
+
+<!-- Dropdown style
       <select class="ui dropdown">
       	  <option placeholder="Account Type">Please Specify Account Type</option>
 		  <option value="1">Employee</option>
 		  <option value="0">Employer</option>
 	  </select><br>
+  -->	  
+	  
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
@@ -120,7 +142,7 @@
     </form>
 
     <div class="ui message">
-      New to us?  <a href="#">New User</a>
+      New to us?  <a href="newuser.html">New User</a>
     </div>
   </div>
 </div>

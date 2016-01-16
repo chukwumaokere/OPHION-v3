@@ -143,7 +143,15 @@
     });
   </script>
 </head>
+
 <body>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a href="home.html" class="active item">Home</a>
+  <a href="logout.php" class="item">Logout</a>
+  <a href=" " class="item">Something else</a>
+</div>
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
@@ -152,22 +160,11 @@
     <a href="about.html" class="item">About OPHION</a>
     <div class="right menu">
       <div class="item">
-        <a href="login.html" class="ui button">Login!</a>
-      </div>
-      <div class="item">
-        <a href="newuser.html" class="ui primary button">New User</a>
+        <a href="logout.php" class="ui button">Logout</a>
       </div>
     </div>
   </div>
 </div>
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
-  <a class="active item">Home</a>
-  <a href="login.html" class="item">Login</a>
-  <a href="newuser.html" class="item">New User</a>
-</div>
-
 
 <!-- Page Contents -->
 <div class="pusher">
@@ -178,29 +175,31 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
+        <a href="#" class="active item">Menu
+        <script>
+		$('.ui.sidebar')
+		  .sidebar('show');
+		</script>
+        </a>
+        <a href="home.html" class="item">Home</a>
         <a href="about.html" class="item">About OPHION</a>
         <div class="right item">
-          <a href="login.html" class="ui inverted button">Login!</a>
-          <a href="newuser.html"class="ui inverted button">New User</a>
+          <a href="logout.html" class="ui inverted button">Logout</a>
         </div>
       </div>
     </div>
-
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        OPHION
-      </h1>
-      <h2>The World's Best Employee Handler</h2>
-      <a href="login.html">
-      <div class="ui huge grey button">Let's Go! <i class="right arrow icon"></i></div>
-      </div>
-      </a>
-
-  </div>
+    
+<!-- Things in between -->
+<div class="ui text container">
+	<div>
+      <h1 class="ui inverted header">Welcome to OPHION</h1>
+      <h2>Please choose an option on the left</h2>
+    </div>
+</div>
+</div>
 
 <!-- Footer -->
-  <div class="ui inverted vertical footer segment">
+ <div class="ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
         <div class="three wide column">
@@ -226,7 +225,7 @@
         </div>
       </div>
     </div>
-  </div> 
-</div>
+  </div>
+  </div>
 </body>
 </html>
