@@ -5,9 +5,10 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="refresh" content="3;url=http://ophion.chukwumaokere.com" />
 
   <!-- Site Properties -->
-  <title>Welcome to OPHION!</title>
+  <title>You have been logged out</title>
   <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
   <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
 
@@ -143,15 +144,7 @@
     });
   </script>
 </head>
-
 <body>
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
-  <a href="home.html" class="active item">Home</a>
-  <a href="logout.php" class="item">Logout</a>
-  <a href=" " class="item">Something else</a>
-</div>
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
@@ -160,11 +153,22 @@
     <a href="aboutsite.html" class="item">About OPHION</a>
     <div class="right menu">
       <div class="item">
-        <a href="logout.php" class="ui button">Logout</a>
+        <a href="login.html" class="ui button">Login!</a>
+      </div>
+      <div class="item">
+        <a href="newuser.html" class="ui primary button">New User</a>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a href="login.html" class="item">Login</a>
+  <a href="newuser.html" class="item">New User</a>
+</div>
+
 
 <!-- Page Contents -->
 <div class="pusher">
@@ -175,28 +179,23 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a href="welcome.html" class="active item">Menu
-        <script>
-		$('.ui.sidebar')
-		  .sidebar('show');
-		</script>
-        </a>
-        <a href="welcome.html" class="item">Home</a>
+        <a class="item">Home</a>
         <a href="aboutsite.html" class="item">About OPHION</a>
         <div class="right item">
-          <a href="logout.php" class="ui inverted button">Logout</a>
+          <a href="login.html" class="ui inverted button">Login!</a>
+          <a href="newuser.html"class="ui inverted button">New User</a>
         </div>
       </div>
     </div>
-    
-<!-- Things in between -->
-<div class="ui text container">
-	<div>
-      <h1 class="ui inverted header">Welcome to OPHION</h1>
-      <h2>Please choose an option on the left</h2>
-    </div>
-</div>
-</div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+       You have been logged out
+      </h1>
+      <h2>Thanks for being productive</h2>
+      </div>
+
+  </div>
 
 <!-- Footer -->
   <div class="ui inverted vertical footer segment">
@@ -227,6 +226,6 @@
       </div>
     </div>
   </div> 
-  </div>
+</div>
 </body>
 </html>
