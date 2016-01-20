@@ -51,6 +51,19 @@
       $('.ui.form')
         .form({
           fields: {
+       	  user_type: {
+                 identifier  : 'user_type',
+                 rules: [
+                   {
+                     type   : 'empty',
+                     prompt : 'Please specify account type'
+                   },
+                   {
+                     type   : 'user_type',
+                     prompt : 'Please enter a valid account type'
+                   }
+                 ]
+               },
             email: {
               identifier  : 'email',
               rules: [
@@ -103,13 +116,13 @@
 	    <label>Specify your account type:</label><br><br>
 	    <div class="field">
 	      <div class="ui radio checkbox">
-	        <input type="radio" name="frequency" checked="checked" value="1">
+	        <input type="radio" name="user_type" checked="checked" value="1">
 	        <label>Employee</label>
 	      </div>
 	    </div>
 	    <div class="field">
 	      <div class="ui radio checkbox">
-	        <input type="radio" name="frequency" value="0">
+	        <input type="radio" name="user_type" value="0">
 	        <label>Employer</label>
 	      </div>
 	    </div>
