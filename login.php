@@ -18,3 +18,6 @@ else if ($user_type == 1) {
 else {
 	header("location:./login.html");
 }
+
+//this should actually check login credentials with db
+//if user_type in user in chukwuma_ophion = 0 or 1
