@@ -29,7 +29,7 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //shows errors
 
 //checks if Account exists
 function doesUserExist($username, $conn) {
-	$stmt = $conn->prepare("SELECT username FROM user WHERE username = username");
+	$stmt = $conn->prepare("SELECT username FROM user WHERE username = :username");
 	$stmt->bindParam(':username', $username);
 	$stmt->execute();
 
@@ -45,8 +45,7 @@ function doesUserExist($username, $conn) {
 $r = doesUserExist($username, $conn);
 
 if ($r == true) {
-	echo "<b>Account Already Exists</b>";
-	header("refresh:5;url=http://ophion.chukwumaokere.com/newuser.html");
+	header("location:http://ophion.chukwumaokere.com/accountexists.html");
 }
 else {
 	$acc = new Account();
@@ -70,8 +69,7 @@ else {
 
 	$acc->insertAccount($conn);
 
-	echo "<b>Account Data Saved! Please Login</b>";
-	header("refresh:5;url=http://ophion.chukwumaokere.com/login.html"); /* Redirect browser */
+	header("location:http://ophion.chukwumaokere.com/accountcreated.html"); /* Redirect browser */
 }
 
 exit();
