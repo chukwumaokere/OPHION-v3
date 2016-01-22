@@ -1,10 +1,10 @@
 <?php
+session_start(['cookie_lifetime' => 600]);
+
 $user = $_POST['user'];
 $password= $_POST['password'];
 $user_type = $_POST['user_type'];
 
-
-session_start(['cookie_lifetime' => 600]);
 $_SESSION['user'] = $user;
 $_SESSION['password'] = $password;
 $_SESSION['user_type'] = $user_type;

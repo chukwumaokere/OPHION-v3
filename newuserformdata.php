@@ -7,7 +7,7 @@ $company_name = $_POST['company_name'];
 $company_id = $_POST['company_id'];
 $email = $_POST['email'];
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $address1 = $_POST['address1'];
 $address2 = $_POST['address2'];
 $country= $_POST['country'];
@@ -73,26 +73,3 @@ else {
 }
 
 exit();
-/*to crash server
- for ($x = 0; $x <= 1000000; $x++) {
- $stmt->execute();
- }*/
-
-
-/*
- function example
- function familyName($fname, $year) {
- echo "$fname Refsnes. Born in $year <br>";
- }
-
- familyName("Hege","1975");
- familyName("Stale","1978");
- familyName("Kai Jim","1983");
- ?>*/
-
-/*
- * MVC (codeigniter, cakephp)
- * model, view, controller
- * css
- * javascript to detect characters
- */
