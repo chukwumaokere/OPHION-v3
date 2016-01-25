@@ -71,6 +71,15 @@
                 }
               ]
             },
+            username: {
+                identifier: 'username',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter a username'
+                  }
+                ]
+              },
             password: {
               identifier  : 'password',
               rules: [
@@ -84,6 +93,15 @@
                 }
               ]
             }
+            terms: {
+                identifier: 'terms',
+                rules: [
+                  {
+                    type   : 'checked',
+                    prompt : 'You must agree to the terms and conditions'
+                  }
+                ]
+              }
           }
         })
       ;
@@ -185,10 +203,10 @@
           </div>
         </div>
         
-        <div class="field">
+
+          <div class="field">
           <div class="ui left icon input">
-            <i class="world icon"></i>
-            <select name="country">
+            <select class="ui search dropdown" name="country">
             	<option value="" disabled selected>Select Your Country</option>
 				<option value="AF">Afghanistan</option>
 				<option value="AX">Åland Islands</option>
@@ -478,6 +496,11 @@
           </div>
         </div>
         
+        <div class="inline field">
+    	<div class="ui checkbox">
+      	<input type="checkbox" name="terms">
+     	<label>I agree to the <a href="termsandconditions.html">Terms and Conditions</a>.</label></div>
+        <br>
         
         <div class="ui fluid large black submit button">Create Account!</div>
       </div>

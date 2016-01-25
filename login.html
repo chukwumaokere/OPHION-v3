@@ -64,6 +64,15 @@
                 }
               ]
             },
+            username: {
+                identifier: 'username',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter a username'
+                  }
+                ]
+              },
             password: {
               identifier  : 'password',
               rules: [
@@ -126,7 +135,7 @@
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="user" placeholder="Username">
+            <input type="text" name="username" placeholder="Username">
           </div>
         </div>
         <div class="field">
