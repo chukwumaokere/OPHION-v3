@@ -1,6 +1,6 @@
 <?php
 //begin session
-session_start(['cookie_lifetime' => 600]);
+session_start();
 
 //variables needed
 $username = $_POST['username'];
@@ -58,19 +58,3 @@ if (password_verify($password, $passwordHash) == true && $user_type == 0) {
 		header("refresh: 3;url=./login.html");
 		//header("location:./incorrectlogin.html") //when released
 	}
-
-
-/* //check user type
- if ($user_type == 0) {
-	header("location:./welcomeemployer.html");
-}
-else if ($user_type == 1) {
-	header("location:./welcome.html");
-}
-	
-else {
-	header("location:./login.html");
-} */
- 
-//this should actually check login credentials with db
-//if user_type in user in chukwuma_ophion = 0 or 1

@@ -1,15 +1,16 @@
 <?php
-$user_type = $_POST['user_type'];
-$_SESSION['user_type'] = $user_type;
+session_start();
+
+$_SESSION['user_type'];
 
 
-if ($user_type == 0) {
+if (isset($_SESSION['username']) && $_SESSION['user_type'] == 0) {
 	header("location:./welcomeemployer.html");
 }
-else if ($user_type == 1) {
+else if (isset($_SESSION['username']) && $_SESSION['user_type'] == 1) {
 	header("location:./welcome.html");
 }
 
 else {
-	header("location:./login.html");
+	header("location:./index.html");
 }
