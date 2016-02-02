@@ -513,8 +513,17 @@
 
     </form>
   </div>
+<script>
+$(document).ready(function(){
 
-
+	   // jQuery methods go here...
+$(".phone").keyup(function () {
+    if (this.value.length == this.maxLength) {
+      $(this).next('.phone').focus();
+    	}
+	});
+});
+</script>
 </body>
 
 </html>
