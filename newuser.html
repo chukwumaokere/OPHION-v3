@@ -58,6 +58,28 @@
       $('.ui.form')
         .form({
           fields: {
+           username: {
+               identifier: 'username',
+               rules: [
+                 {
+                   type   : 'empty',
+                   prompt : 'Please enter a username'
+                 }
+               ]
+             },
+          password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter a password'
+                },
+                {
+                  type   : 'minLength[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                }
+              ]
+            },
             email: {
               identifier  : 'email',
               rules: [
@@ -71,29 +93,7 @@
                 }
               ]
             },
-            username: {
-                identifier: 'username',
-                rules: [
-                  {
-                    type   : 'empty',
-                    prompt : 'Please enter a username'
-                  }
-                ]
-              },
-            password: {
-              identifier  : 'password',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your password'
-                },
-                {
-                  type   : 'length[6]',
-                  prompt : 'Your password must be at least 6 characters'
-                }
-              ]
-            }
-            terms: {
+              terms: {
                 identifier: 'terms',
                 rules: [
                   {
@@ -101,7 +101,7 @@
                     prompt : 'You must agree to the terms and conditions'
                   }
                 ]
-              }
+              } 
           }
         })
       ;
@@ -498,7 +498,7 @@
         
         <div class="inline field">
     	<div class="ui checkbox">
-      	<input type="checkbox" name="terms">
+      	<input type="checkbox" name="terms" required>
      	<label>I agree to the <a href="tos.html">Terms and Conditions</a>.</label></div>
         <br>
         
